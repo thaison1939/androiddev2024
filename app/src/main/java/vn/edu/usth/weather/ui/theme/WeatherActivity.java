@@ -1,8 +1,12 @@
 package vn.edu.usth.weather.ui.theme;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 
 import vn.edu.usth.weather.R;
@@ -14,6 +18,14 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.i("WeatherActivity", "onCreate");
         setContentView(R.layout.activity_weather);
+
+        //set ActionBar color
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#3F51B5"));
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(colorDrawable);
 
         ForecastFragment forecastFragment = new ForecastFragment();
 

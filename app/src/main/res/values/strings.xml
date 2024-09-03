@@ -3,4 +3,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="thursday">Thursday</string>
     <string name="image_description1">weather-image</string>
+    <string name="Monday">Mon</string>
+    <string name="Tuesday">Tue</string>
+    <string name="Wednesday">Wed</string>
+    <string name="Thursday">Thu</string>
+    <string name="Friday">Fri</string>
+    <string name="Saturday">Sat</string>
+    <string name="Sunday">Sun</string>
+    <string name="cloudy_weather">cloudy_weather</string>
+    <string name="partly_cloudy_n_24c_31c">Partly Cloudy \n24C - 31C</string>
+    <string name="rainy_weather">rainy-weather</string>
+    <string name="showers_n24c_30c">Showers \n24C - 30C</string>
+    <string name="scattered_thunderstorm_n23c_26c">Scattered Thunderstorm \n23C - 26C</string>
+    <string name="showers_n24c_25c">Showers \n24C - 25C</string>
+    <string name="sunny_day_n40c_45c">Sunny Day \n40C - 45C</string>
 </resources>
