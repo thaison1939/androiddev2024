@@ -17,4 +17,8 @@
     <string name="scattered_thunderstorm_n23c_26c">Scattered Thunderstorm \n23C - 26C</string>
     <string name="showers_n24c_25c">Showers \n24C - 25C</string>
     <string name="sunny_day_n40c_45c">Sunny Day \n40C - 45C</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_12c_ncloudy">12C \nCloudy</string>
+    <string name="ha_noi">Ha Noi</string>
 </resources>

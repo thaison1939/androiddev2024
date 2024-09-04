@@ -27,13 +27,22 @@ public class WeatherActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setBackgroundDrawable(colorDrawable);
 
+        /*
         ForecastFragment forecastFragment = new ForecastFragment();
 
         getSupportFragmentManager().beginTransaction().add(
                 R.id.bglayout, forecastFragment
         ).commit();
 
+        WeatherFragment wf = new WeatherFragment();
+
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.bglayout, wf
+        ).commit();
+        */
+
     }
+
 
 
 
