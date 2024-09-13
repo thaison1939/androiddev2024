@@ -1,74 +1,107 @@
-package vn.edu.usth.weather.ui.theme;
+    package vn.edu.usth.weather.ui.theme;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+    import androidx.annotation.NonNull;
+    import androidx.appcompat.app.ActionBar;
+    import androidx.appcompat.app.AppCompatActivity;
+    import androidx.fragment.app.Fragment;
+    import androidx.fragment.app.FragmentActivity;
+    import androidx.viewpager2.adapter.FragmentStateAdapter;
+    import androidx.viewpager2.widget.ViewPager2;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
+    import android.annotation.SuppressLint;
+    import android.graphics.Color;
+    import android.graphics.drawable.ColorDrawable;
+    import android.os.Bundle;
+    import android.text.Html;
+    import android.util.Log;
 
-import vn.edu.usth.weather.R;
+    import vn.edu.usth.weather.R;
 
-public class WeatherActivity extends AppCompatActivity {
-    private static final String TAG = "WeatherActivity";
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.i("WeatherActivity", "onCreate");
-        setContentView(R.layout.activity_weather);
+    public class WeatherActivity extends AppCompatActivity {
+        private static final String TAG = "WeatherActivity";
+        private ViewPager2 viewPager;
+        private FragmentStateAdapter pagerAdapter;
 
-        //set ActionBar color
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
+        @SuppressLint("MissingInflatedId")
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Log.i("WeatherActivity", "onCreate");
+            setContentView(R.layout.activity_weather);
 
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#3F51B5"));
-        assert actionBar != null;
-        actionBar.setBackgroundDrawable(colorDrawable);
+            //set ActionBar color
+            ActionBar actionBar;
+            actionBar = getSupportActionBar();
 
-        /*
-        ForecastFragment forecastFragment = new ForecastFragment();
+            ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#3F51B5"));
+            assert actionBar != null;
+            actionBar.setBackgroundDrawable(colorDrawable);
 
-        getSupportFragmentManager().beginTransaction().add(
-                R.id.bglayout, forecastFragment
-        ).commit();
+            viewPager = findViewById(R.id.viewPager);
+            pagerAdapter = new ViewPagerAdapter(this);
+            viewPager.setAdapter(pagerAdapter);
 
-        WeatherFragment wf = new WeatherFragment();
 
-        getSupportFragmentManager().beginTransaction().add(
-                R.id.bglayout, wf
-        ).commit();
-        */
+            /*
+            ForecastFragment forecastFragment = new ForecastFragment();
 
+            getSupportFragmentManager().beginTransaction().add(
+                    R.id.bglayout, forecastFragment
+            ).commit();
+
+            WeatherFragment wf = new WeatherFragment();
+
+            getSupportFragmentManager().beginTransaction().add(
+                    R.id.bglayout, wf
+            ).commit();
+            */
+
+        }
+
+
+        public class ViewPagerAdapter extends FragmentStateAdapter {
+            private final int Page_count = 3;
+
+            public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+                super(fragmentActivity);
+            }
+
+            @NonNull
+            @Override
+            public Fragment createFragment(int position) {
+                return new WeatherAndForecastFragment();
+            }
+
+            @Override
+            public int getItemCount() {
+                return Page_count;
+            }
+        }
+
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            Log.i(TAG, "onStart");
+        }
+
+        protected void onResume() {
+            super.onResume();
+            Log.i(TAG, "onResume");
+        }
+
+        protected void onPause() {
+            super.onPause();
+            Log.i(TAG, "onPause");
+        }
+
+        protected void onStop() {
+            super.onStop();
+            Log.i(TAG, "onStop");
+        }
+
+        protected void onDestroy() {
+            super.onDestroy();
+            Log.i(TAG, "onDestroy");
+        }
     }
-
-
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(TAG, "onStart");
-    }
-
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "onResume");
-    }
-
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "onPause");
-    }
-
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "onStop");
-    }
-
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "onDestroy");
-    }
-}
