@@ -1,326 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue" xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.theme.ForecastFragment"
-    android:id="@+id/ForecastFragment"
-    android:orientation="vertical"
-    android:layout_margin="15dp">
-
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent"
+        android:background="@color/blue" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.theme.ForecastFragment"
+        android:id="@+id/ForecastFragment"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
 
-        <TextView
-            android:layout_width="0dp"
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Monday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-         />
+            android:layout_marginTop="10dp">
 
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/cloudy" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Monday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+             />
 
-        <TextView
-            android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/partly_cloudy_n_24c_31c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/partly_cloudy_n_24c_31c"
-            android:textSize="18sp"/>
+            android:layout_marginTop="10dp">
 
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/Tuesday"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:contentDescription="@string/rainy_weather"
+                android:src="@drawable/rainy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/showers_n24c_30c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/Wednesday"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:contentDescription="@string/rainy_weather"
+                android:src="@drawable/rainy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:text="@string/showers_n24c_30c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Thursday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/sunny" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:text="@string/sunny_day_n40c_45c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Friday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/partly_cloudy_n_24c_31c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Saturday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/sunny" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Not Partly Cloudy \n23C - 30C"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Sunday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/partly_cloudy_n_24c_31c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Monday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/partly_cloudy_n_24c_31c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Tuesday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/rainy" />
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/showers_n24c_25c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Wednesday"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/cloudy_weather"
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="-0.2"
+                android:text="@string/scattered_thunderstorm_n23c_26c"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="22dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/Tuesday"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_weight="1.5"
-            android:contentDescription="@string/rainy_weather"
-            android:src="@drawable/rainy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/showers_n24c_30c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="22dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/Wednesday"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:layout_width="6dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_weight="1.5"
-            android:contentDescription="@string/rainy_weather"
-            android:src="@drawable/rainy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.8"
-            android:text="@string/showers_n24c_30c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Thursday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/sunny" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.6"
-            android:text="@string/sunny_day_n40c_45c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Friday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/cloudy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/partly_cloudy_n_24c_31c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Saturday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/sunny" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.2"
-            android:text="Not Partly Cloudy \n23C - 30C"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Sunday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/cloudy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/partly_cloudy_n_24c_31c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Monday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/cloudy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/partly_cloudy_n_24c_31c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Tuesday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/rainy" />
-
-        <TextView
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/showers_n24c_25c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Wednesday"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:contentDescription="@string/cloudy_weather"
-            android:layout_weight="1.5"
-            android:layout_gravity="center"
-            android:src="@drawable/cloudy" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="-0.2"
-            android:text="@string/scattered_thunderstorm_n23c_26c"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-
-
-
-
-</LinearLayout>
+</ScrollView>

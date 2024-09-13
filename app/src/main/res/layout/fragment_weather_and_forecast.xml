@@ -16,7 +16,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView17"
         android:name="vn.edu.usth.weather.ui.theme.ForecastFragment"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView19"
         android:name="vn.edu.usth.weather.ui.theme.WeatherFragment"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,5 +12,5 @@ Student Info
 
 * Name: Dao Thai Son
 * ID: 22BI13392
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Group ID: 1
+* Project Name: GrabFood app client

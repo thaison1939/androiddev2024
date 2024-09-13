@@ -15,6 +15,9 @@
     import android.text.Html;
     import android.util.Log;
 
+    import com.google.android.material.tabs.TabLayout;
+    import com.google.android.material.tabs.TabLayoutMediator;
+
     import vn.edu.usth.weather.R;
 
     public class WeatherActivity extends AppCompatActivity {
@@ -56,6 +59,20 @@
             ).commit();
             */
 
+            TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+            new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+                switch (position) {
+                    case 0:
+                        tab.setText("HANOI, VIETNAM");
+                        break;
+                    case 1:
+                        tab.setText("PARIS, FRANCE");
+                        break;
+                    case 2:
+                        tab.setText("TOULOUSE, FRANCE");
+                        break;
+                }
+            }).attach();
         }
 
 
