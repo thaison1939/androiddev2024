@@ -26,8 +26,8 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
-             />
+                android:textSize="@dimen/font_size"
+                />
 
             <ImageView
                 android:layout_width="45dp"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/partly_cloudy_n_24c_31c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
 
@@ -58,7 +58,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/Tuesday"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size" />
 
             <ImageView
                 android:layout_width="22dp"
@@ -73,9 +73,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/showers_n24c_30c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +89,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/Wednesday"
-                android:textSize="18sp" />
+                android:textSize="@dimen/font_size" />
 
             <ImageView
                 android:layout_width="6dp"
@@ -103,9 +104,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.8"
                 android:text="@string/showers_n24c_30c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,7 +120,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -134,9 +136,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2.6"
                 android:text="@string/sunny_day_n40c_45c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,7 +152,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -165,9 +168,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/partly_cloudy_n_24c_31c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -180,7 +184,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -195,10 +199,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.2"
-                android:text="Not Partly Cloudy \n23C - 30C"
-                android:textSize="18sp"/>
+                android:text="@string/not_partly_cloudy_n23c_30c"
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,7 +216,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -227,9 +232,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/partly_cloudy_n_24c_31c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -242,7 +248,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -258,9 +264,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/partly_cloudy_n_24c_31c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -273,7 +280,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -289,9 +296,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/showers_n24c_25c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -304,7 +312,7 @@
                 android:layout_weight="2"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center_vertical"
-                android:textSize="18sp"
+                android:textSize="@dimen/font_size"
                 />
 
             <ImageView
@@ -320,7 +328,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="-0.2"
                 android:text="@string/scattered_thunderstorm_n23c_26c"
-                android:textSize="18sp"/>
+                android:textSize="@dimen/font_size"/>
 
         </LinearLayout>
     </LinearLayout>

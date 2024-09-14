@@ -1,38 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragmentWeatherBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.theme.WeatherFragment"
-    android:padding="15dp">
+    tools:context=".ui.theme.WeatherFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@color/green"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_12c_ncloudy"
-                android:textSize="20sp"
-                android:layout_alignParentLeft="true"
-            />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/cloudy"
-                android:layout_centerHorizontal="true"
-                android:contentDescription="@string/cloudy_weather"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:textSize="20sp"
-                android:text="@string/ha_noi"/>
-        </RelativeLayout>
+    <!-- ImageView as background -->
 
-</LinearLayout>
+    <!-- RelativeLayout for weather info, centered in the screen -->
+    <RelativeLayout
+        android:id="@+id/weather_info"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:padding="32dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp">
+
+        <!-- Weather temperature and condition -->
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27C"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp" />
+
+        <!-- Weather Icon -->
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/cloudy_weather"
+            android:src="@drawable/cloudy"
+            android:layout_centerInParent="true" />
+
+        <!-- City name -->
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hà Nội"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
