@@ -20,10 +20,14 @@
 
     import vn.edu.usth.weather.R;
 
+    import android.media.MediaPlayer;
+
     public class WeatherActivity extends AppCompatActivity {
         private static final String TAG = "WeatherActivity";
         private ViewPager2 viewPager;
         private FragmentStateAdapter pagerAdapter;
+
+        MediaPlayer mp;
 
         @SuppressLint("MissingInflatedId")
         @Override
@@ -43,6 +47,10 @@
             viewPager = findViewById(R.id.viewPager);
             pagerAdapter = new ViewPagerAdapter(this);
             viewPager.setAdapter(pagerAdapter);
+
+            mp = MediaPlayer.create(this, R.raw.ringring);
+            mp.setLooping(true);
+            mp.start();
 
 
             /*
