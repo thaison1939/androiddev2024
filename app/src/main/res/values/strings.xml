@@ -23,4 +23,7 @@
     <string name="ha_noi">Ha Noi</string>
     <string name="not_partly_cloudy_n23c_30c">Not Partly Cloudy \n23C - 30C</string>
     <string name="frame">frame</string>
+    <string name="my_new_activity">My New Activity</string>
+    <string name="refresh">Refresh</string>
+    <string name="more">More</string>
 </resources>

@@ -7,13 +7,14 @@
     import androidx.fragment.app.FragmentActivity;
     import androidx.viewpager2.adapter.FragmentStateAdapter;
     import androidx.viewpager2.widget.ViewPager2;
-
+    import androidx.appcompat.widget.Toolbar;
     import android.annotation.SuppressLint;
+    import android.content.Intent;
     import android.graphics.Color;
     import android.graphics.drawable.ColorDrawable;
     import android.os.Bundle;
-    import android.text.Html;
     import android.util.Log;
+    import android.widget.Toast;
 
     import com.google.android.material.tabs.TabLayout;
     import com.google.android.material.tabs.TabLayoutMediator;
@@ -52,6 +53,10 @@
             mp.setLooping(true);
             mp.start();
 
+            initToolBar();
+
+
+
 
             /*
             ForecastFragment forecastFragment = new ForecastFragment();
@@ -81,6 +86,25 @@
                         break;
                 }
             }).attach();
+        }
+        private void initToolBar() {
+            Toolbar toolbar = findViewById(R.id.weather_toolbar);
+            toolbar.inflateMenu(R.menu.menu_tool_bar);
+            toolbar.setTitle(R.string.app_name);
+            toolbar.setOnMenuItemClickListener(item -> {
+                int itemMenuId =item.getItemId();
+                if(itemMenuId == R.drawable.ic_refresh_24){
+                    Toast.makeText(this,"Refreshing process...",Toast.LENGTH_SHORT).show();
+                    return true;
+                } else if (itemMenuId == R.id.ic_more) {
+                    Intent intent = new Intent(this,PrefActivity.class);
+                    startActivity(intent);
+                    return true;
+                }else{
+                    Toast.makeText(this,"Not found menu item",Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
         }
 
 
