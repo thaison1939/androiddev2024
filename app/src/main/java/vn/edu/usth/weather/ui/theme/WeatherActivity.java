@@ -1,7 +1,6 @@
     package vn.edu.usth.weather.ui.theme;
 
     import androidx.annotation.NonNull;
-    import androidx.appcompat.app.ActionBar;
     import androidx.appcompat.app.AppCompatActivity;
     import androidx.fragment.app.Fragment;
     import androidx.fragment.app.FragmentActivity;
@@ -10,10 +9,10 @@
     import androidx.appcompat.widget.Toolbar;
     import android.annotation.SuppressLint;
     import android.content.Intent;
-    import android.graphics.Color;
-    import android.graphics.drawable.ColorDrawable;
     import android.os.AsyncTask;
     import android.os.Bundle;
+    import android.os.Handler;
+    import android.os.Looper;
     import android.util.Log;
     import android.widget.Toast;
 
@@ -28,7 +27,7 @@
         private static final String TAG = "WeatherActivity";
         private ViewPager2 viewPager;
         private FragmentStateAdapter pagerAdapter;
-
+        private Handler handler;
         MediaPlayer mp;
 
         @SuppressLint("MissingInflatedId")
@@ -48,10 +47,21 @@
 
             initToolBar();
 
+            handler = new Handler(getMainLooper()) ;
+
+
             Thread t = new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
+                    handler.post(() -> {
+                        Toast.makeText(WeatherActivity.this, "Refreshing completed!", Toast.LENGTH_SHORT).show();
+                    });
                 }
             });
             t.start();
