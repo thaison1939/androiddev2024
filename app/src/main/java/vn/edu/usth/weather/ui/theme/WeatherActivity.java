@@ -37,14 +37,6 @@
             Log.i("WeatherActivity", "onCreate");
             setContentView(R.layout.activity_weather);
 
-            //set ActionBar color
-            ActionBar actionBar;
-            actionBar = getSupportActionBar();
-
-            ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#3F51B5"));
-            assert actionBar != null;
-            actionBar.setBackgroundDrawable(colorDrawable);
-
             viewPager = findViewById(R.id.viewPager);
             pagerAdapter = new ViewPagerAdapter(this);
             viewPager.setAdapter(pagerAdapter);
@@ -54,6 +46,14 @@
             mp.start();
 
             initToolBar();
+
+            Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });
+            t.start();
 
 
 
@@ -88,13 +88,22 @@
             }).attach();
         }
         private void initToolBar() {
-            Toolbar toolbar = findViewById(R.id.weather_toolbar);
+            Toolbar toolbar = findViewById(R.id.weather_menu);
             toolbar.inflateMenu(R.menu.menu_tool_bar);
             toolbar.setTitle(R.string.app_name);
             toolbar.setOnMenuItemClickListener(item -> {
                 int itemMenuId =item.getItemId();
                 if(itemMenuId == R.drawable.ic_refresh_24){
                     Toast.makeText(this,"Refreshing process...",Toast.LENGTH_SHORT).show();
+                    new Thread(() -> {
+                        try {
+                            Thread.sleep(3000);
+                        }
+                        catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        runOnUiThread(() -> Toast.makeText(this, "Refresh complete!", Toast.LENGTH_SHORT).show());
+                    }).start();
                     return true;
                 } else if (itemMenuId == R.id.ic_more) {
                     Intent intent = new Intent(this,PrefActivity.class);
