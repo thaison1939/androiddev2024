@@ -12,6 +12,7 @@
     import android.content.Intent;
     import android.graphics.Color;
     import android.graphics.drawable.ColorDrawable;
+    import android.os.AsyncTask;
     import android.os.Bundle;
     import android.util.Log;
     import android.widget.Toast;
@@ -87,23 +88,17 @@
                 }
             }).attach();
         }
+
         private void initToolBar() {
             Toolbar toolbar = findViewById(R.id.weather_menu);
+            getSupportActionBar();
             toolbar.inflateMenu(R.menu.menu_tool_bar);
             toolbar.setTitle(R.string.app_name);
             toolbar.setOnMenuItemClickListener(item -> {
                 int itemMenuId =item.getItemId();
                 if(itemMenuId == R.drawable.ic_refresh_24){
                     Toast.makeText(this,"Refreshing process...",Toast.LENGTH_SHORT).show();
-                    new Thread(() -> {
-                        try {
-                            Thread.sleep(3000);
-                        }
-                        catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        runOnUiThread(() -> Toast.makeText(this, "Refresh complete!", Toast.LENGTH_SHORT).show());
-                    }).start();
+                    new RefreshTask().execute();
                     return true;
                 } else if (itemMenuId == R.id.ic_more) {
                     Intent intent = new Intent(this,PrefActivity.class);
@@ -115,6 +110,29 @@
                 }
             });
         }
+
+        private class RefreshTask extends AsyncTask<Void, Void, String> {
+            protected void onPreExecuted() {
+                super.onPreExecute();
+                Toast.makeText(WeatherActivity.this, "Refreshing...", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return "Refresh Complete!";
+            }
+
+            protected void onPostExecute(String result) {
+                Toast.makeText(WeatherActivity.this, result, Toast.LENGTH_SHORT).show();
+            }
+        }
+
 
 
         public class ViewPagerAdapter extends FragmentStateAdapter {
@@ -135,6 +153,7 @@
                 return Page_count;
             }
         }
+
 
 
         @Override
@@ -163,3 +182,4 @@
             Log.i(TAG, "onDestroy");
         }
     }
+
